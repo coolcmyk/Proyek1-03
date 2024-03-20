@@ -1,3 +1,13 @@
+// Written By:
+// Ryan Adidaru Excel Barnabi - 2306266994
+// Teufik Ali Hadzalic - 2306267012
+// Program Version : 1.0
+//Date: 20/3/2024 
+//Group: 3 
+//Judul Program : Proyek1-03 (Proyek Akhir UTS, Study Assistant) 
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
