@@ -29,8 +29,19 @@ import os
     # # Start the GIF animation
     # update_gif()
 # Function to display image
+import signal
+
+# Define a signal handler function
+def signal_handler(sig, frame):
+    print("Ctrl + C pressed. Exiting...")
+    terminate_vlc()
+    os.remove("temp.mp3")
+
+# Register the signal handler for Ctrl + C
+signal.signal(signal.SIGINT, signal_handler)
+
 def display_image(root):
-    img_path = r"imageMove.gif"  # Replace with the path to your image
+    img_path = r".header/imageMove.gif"  # Replace with the path to your image
     img = Image.open(img_path)
     img = img.resize((300, 300))  # Adjust size as needed
 
@@ -133,6 +144,7 @@ async def main():
                 os.remove("temp.mp3")
                 break
 
+            
             # Special keyword for toggling modes
             if message.lower() == 'toggle':
                 is_conversation_mode = not is_conversation_mode

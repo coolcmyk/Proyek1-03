@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Kyomoto/OneDrive/Desktop/prepare/ProyekUTS/.header",
-      "program": "c:/Users/Kyomoto/OneDrive/Desktop/prepare/ProyekUTS/.header/build/Debug/outDebug",
+      "cwd": "c:/Users/Kyomoto/OneDrive/Desktop/prepare/ProyekUTS",
+      "program": "c:/Users/Kyomoto/OneDrive/Desktop/prepare/ProyekUTS/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

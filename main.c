@@ -68,6 +68,7 @@ int main() {
 			            }
 			        }
 			    }
+                break;
             case 9:
             	printf("Exiting...\n");
                 break;
