@@ -3,7 +3,7 @@ Proyek UTS Pemrograman Lanjut Kelas 02
 Written By:
 
 Ryan Adidaru Excel Barnabi - 2306266994
-Teufik Ali Hadzalic - 
+Teufik Ali Hadzalic - 2306267012
 
 ### Installation Instructions:
 
@@ -34,7 +34,7 @@ Teufik Ali Hadzalic -
       ```
 
 4. **Usage:**
-   - Follow the prompts or integrate the functionality provided in the script into your project as needed.
+   - Follow the User's Guide if you can't figure out how certain function works, or check the documentation for more information.
 
 #### Additional Notes:
 - Make sure to have an active internet connection during installation to download the required packages.
