@@ -6,11 +6,33 @@ import subprocess
 from PIL import Image, ImageTk
 import tkinter as tk
 import os
+
+
+
+# Prototype Function to display animated GIF
+# #def display_gif(root):
+#     gif_path = r"imageMove.gif"  # Replace with the path to your animated GIF
+#     gif = Image.open(gif_path)
+    
+#     # Create a label to display the animated GIF
+#     gif_label = tk.Label(root)
+#     gif_label.pack()
+
+#     # Function to update the animated GIF
+#     def update_gif():
+#         frame = gif.tell()
+    #     gif_label.configure(image=ImageTk.PhotoImage(gif))
+    #     gif_label.image = ImageTk.PhotoImage(gif)
+    #     gif.seek(frame + 1)
+    #     root.after(100, update_gif)  # Adjust the delay (milliseconds) for animation speed
+        
+    # # Start the GIF animation
+    # update_gif()
 # Function to display image
 def display_image(root):
-    img_path = "E:/WaifuAI/Hu_Tao_Icon.png"  # Replace with the path to your image
+    img_path = r"imageMove.gif"  # Replace with the path to your image
     img = Image.open(img_path)
-    img = img.resize((150, 300))  # Adjust size as needed
+    img = img.resize((300, 300))  # Adjust size as needed
 
     # Convert the image for Tkinter
     img_tk = ImageTk.PhotoImage(img)
@@ -19,6 +41,15 @@ def display_image(root):
     img_label = tk.Label(root, image=img_tk)
     img_label.image = img_tk  # Keep a reference to avoid garbage collection
     img_label.pack()
+
+    # Function to lift the image label to the top layer
+    def lift_to_top():
+        img_label.lift()
+        # Schedule the lift_to_top function to be called again after 100 milliseconds
+        root.after(100, lift_to_top)
+
+    # Start the continuous lifting
+    lift_to_top()
 
 async def execute_python_file(file_name):
     try:
@@ -38,6 +69,7 @@ async def main():
     root.title("Study Chat")
 
     # Display image on top
+    # display_gif(root) prototype
     display_image(root)
     #YntB_ZeqRq2l_aVf2gWDCZl4oBttQzDvhj9cXafWcF8 68c4a39fbf35acc12d561282dddf3151dc01cc7b hu tao kZ3_qgkyiYvcRqgwv1WE2WQeME9CZy1yrCnMx98wyfk
     client = PyAsyncCAI('68c4a39fbf35acc12d561282dddf3151dc01cc7b') 
@@ -66,11 +98,6 @@ async def main():
             try:
                 message = recognizer.recognize_google(audio, language='en')
                 print('You said:', message)
-
-                if message.lower() == 'execute mushroom':
-                    await execute_python_file('your_python_file.py')  # Replace with your Python file's name
-                    continue
-
                 # Rest of the speech-to-text and chat interaction code...
                 # Special keyword for toggling modes
                 if message.lower() == 'toggle':

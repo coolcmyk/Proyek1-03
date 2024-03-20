@@ -9,8 +9,8 @@ Teufik Ali Hadzalic -
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository_url>
-   cd <project_directory>
+   git clone https://github.com/coolcmyk/Proyek1-03
+   cd Proyek1-03
    ```
 
 2. **Install Dependencies:**
@@ -21,11 +21,17 @@ Teufik Ali Hadzalic -
      ```
 
 3. **Run the Application:**
-   - Once the dependencies are installed, you can run the application using the following command:
+   - Once the dependencies are installed, you can run the application by building the app.exe using the following command:
      ```bash
-     python your_script.py
+     cd Proyek1-03
+     gcc -o app.exe main.c
+     .\app.exe
      ```
-     Replace `your_script.py` with the name of your main Python script.
+   Or just simply run the app.exe by running this command in your current directory
+      ```bash
+      cd Proyek1-03
+      .\app.exe
+      ```
 
 4. **Usage:**
    - Follow the prompts or integrate the functionality provided in the script into your project as needed.
