@@ -1,0 +1,6 @@
+asyncio==3.4.3
+SpeechRecognition==3.8.1
+characterai==1.2.0
+gTTS==2.2.3
+Pillow==9.0.0
+tk==0.1.0
